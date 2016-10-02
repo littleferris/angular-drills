@@ -1,9 +1,35 @@
 <html ng-app="apiApp">
-	<body>
-		
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css" >
+</head>
+<title>Pokedex</title>
+	<body ng-controller='controller'>
+			<header>
+				<h1>Pokedex</h1>
+				<nav>
+					<input class="searchBox" type="text" name="name" value="" ng-model='myFilter' placeholder="search">
+					<button class="shinyToggle"  ng-click="showImg = !showImg; toggle = !toggle" type="button">{{toggleText}}</button>
+				</nav>
+			<!-- <hr> -->
+		</header>
+		<div class="main-container">
+
+					<div class="pokemon" ng-repeat="pokemon in pokemonNames | filter: myFilter">
+
+						<img ng-class="{'reg': showImg}" ng-src="{{pokemon.regUrl}}"/>
+						<img ng-class="{'shiny': !showImg}"  ng-src="{{pokemon.shinyUrl}}"/><br><br>
+					 {{pokemon.id + "."}} {{pokemon.name}}
+
+			 		</div>
+
+		</div>
+
+
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
+		<script src="statsService.js"></script>
 	</body>
 </html>

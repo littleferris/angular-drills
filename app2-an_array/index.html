@@ -3,7 +3,20 @@
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
 	<body ng-controller="arrayController">
-	
+
+		<div class="filter">
+			Search: <input type="text" name="name" ng-model='filterText' >
+		</div>
+		<hr>
+		<div class="" ng-repeat="data in myData | filter: filterText">
+			Name: {{data.name}} <br>
+			Email: {{data.email}} <br>
+			Phone Number: {{data.phone}} <br>
+		 	Employed Date:{{data.dateEmployed}}<hr>
+		</div>
+
+
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+  background-image: url("https://assets.about.me/background/whosthatpokemon_1349921665_7.jpg");
+}
+
+
+header {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: red;
+  background-image: url('http://vignette1.wikia.nocookie.net/pokemon/images/1/1f/Pokedex_FRLG.png/revision/latest?cb=20100717083156');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: black;
+  border-style: solid;
+}
+
+body {
+  margin: 0;
+}
+
+.main-container {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.pokemon {
+ margin: 0 auto;
+ padding: 5px;
+ background-image: url('http://img03.deviantart.net/49cf/i/2011/068/a/c/pokeball_desktop_icon_by_beccerberry-d3b98cf.png');
+ background-size: contain;
+ background-repeat: no-repeat;
+}
+
+.shinyToggle {
+  position: absolute;
+  right: 40px;
+}
+
+.searchBox {
+  position: absolute;
+  left: 90px;
+}
+
+.shiny {
+  display: none;
+}
+.reg {
+  display: none;
+}

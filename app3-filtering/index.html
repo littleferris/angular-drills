@@ -1,6 +1,23 @@
-<html>
-	<body>
-		Something
+<html ng-app="appArr">
+	<body ng-controller="controller">
+		<title>Array</title>
+		<h1>Array of Peeps</h1>
+		Search: <input type="text" ng-model="myFilter" placeholder="search here">
+		<hr>
+		<div class="" ng-repeat="data in myData | filter: myFilter">
+			Name: {{data.name}}<br>
+			Email: {{data.email}}<br>
+			Phone: {{data.phone}}<br>
+			Employed Date: {{data.dateEmployed}}<hr>
+
+
+		</div>
+
+
+
+
+
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
