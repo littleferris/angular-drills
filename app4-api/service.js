@@ -20,12 +20,20 @@ function ($http, $q) {
         var capitalized = name.split("");
         var currentNum = i + 1;
         var idNum = pokemon.entry_number;
-
+        
+        function zeroPad(num, count) {
+          var numZeropad = num + '';
+          while(numZeropad.length < count) {
+            numZeropad ="0" + numZeropad
+          }
+          return numZeropad;
+        }
+        
         capitalized[0] = capitalized[0].toUpperCase();
         // return (i + 1) + '-' + capitalized.join("");
 
         return ({
-          id: idNum,
+          id: zeroPad(idNum, 3),
           name: capitalized.join(""),
           regUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + idNum  + ".png",
           shinyUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + idNum  + ".png",
