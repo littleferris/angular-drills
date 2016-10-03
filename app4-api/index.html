@@ -23,7 +23,7 @@
 					<div class="pokemon" ng-repeat="pokemon in pokemonNames | filter: myFilter">
 						<img ng-class="{'reg': showImg}" ng-src="{{pokemon.regUrl}}"/>
 						<img ng-class="{'shiny': !showImg}"  ng-src="{{pokemon.shinyUrl}}"/><br><br>
-					 {{pokemon.id + "."}} {{pokemon.name}}
+					 {{pokemon.id + "."}}{{pokemon.name}}
 
 			 		</div>
 
