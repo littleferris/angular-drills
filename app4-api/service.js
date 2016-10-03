@@ -28,7 +28,8 @@ function ($http, $q) {
           id: idNum,
           name: capitalized.join(""),
           regUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + idNum  + ".png",
-          shinyUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + idNum  + ".png"
+          shinyUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/" + idNum  + ".png",
+          backgroundImg: "http://img03.deviantart.net/49cf/i/2011/068/a/c/pokeball_desktop_icon_by_beccerberry-d3b98cf.png"
         })
           // num: idNum
       });
