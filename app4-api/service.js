@@ -48,7 +48,7 @@ function ($http, $q) {
 
 
 
-
+//http://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png
 
 
 
